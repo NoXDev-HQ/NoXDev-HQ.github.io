@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nox Development — We Build. We Ship. We Share.</title>
+    <meta name="description"
+        content="Nox Development — Premium Discord server development, bot development, bot management, custom bots, and custom websites.">
+    <meta name="theme-color" content="#0a0a0f">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nox Development — We Build. We Ship. We Share.">
+    <meta property="og:description" content="Premium Discord server development, bot development, bot management, custom bots, and custom websites.">
+    <meta property="og:image" content="nox2.png">
+    <meta property="og:url" content="https://noxdevelopment.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nox Development">
+    <meta name="twitter:description" content="Premium development services for Discord communities & beyond.">
+    <link rel="apple-touch-icon" href="nox2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="nox2.png" type="image/png">
+</head>
+
+<body>
+    <canvas id="particles"></canvas>
+    <div class="cursor-follow" id="cursorFollow"></div>
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <img src="nox2.png" alt="Nox" class="preloader-logo">
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="nox2.png" alt="Nox" class="nav-logo-img" loading="lazy">
+                <span>NOX</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#resources" class="nav-link">Resources</a>
+            </div>
+            <a href="#cta" class="nav-cta">
+                <span>Get Started</span>
+                <div class="btn-shine"></div>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-left">
+            <div class="hero-badge anim" data-anim="fade-up" data-delay="200">
+                <span class="pulse-dot"></span>
+                Accepting New Projects
+            </div>
+            <h1 class="hero-title anim" data-anim="fade-up" data-delay="400">
+                <span class="line">We <em class="gradient-text">Build.</em></span>
+                <span class="line">We <em class="gradient-text">Ship.</em></span>
+                <span class="line">We <em class="gradient-text">Share.</em></span>
+            </h1>
+            <p class="hero-desc anim" data-anim="fade-up" data-delay="600">
+                Premium development services for Discord communities & beyond. Custom bots, servers, and websites —
+                crafted with precision.
+            </p>
+            <div class="hero-btns anim" data-anim="fade-up" data-delay="800">
+                <a href="#cta" class="btn-primary">
+                    <span>Open a Ticket</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#services" class="btn-outline">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-right anim" data-anim="scale" data-delay="600">
+            <div class="logo-showcase">
+                <div class="logo-bg-glow"></div>
+                <div class="logo-orbit orbit-1"></div>
+                <div class="logo-orbit orbit-2"></div>
+                <div class="logo-orbit orbit-3"></div>
+                <div class="orbit-dot dot-1"></div>
+                <div class="orbit-dot dot-2"></div>
+                <div class="orbit-dot dot-3"></div>
+                <img src="nox2.png" alt="Nox Development" class="logo-main">
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Hint -->
+    <div class="scroll-hint-wrap">
+        <div class="scroll-hint anim" data-anim="fade-up" data-delay="1200">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-inner">
+            <span>DISCORD BOTS</span><span class="sep">✦</span>
+            <span>SERVER SETUP</span><span class="sep">✦</span>
+            <span>CUSTOM WEBSITES</span><span class="sep">✦</span>
+            <span>BOT MANAGEMENT</span><span class="sep">✦</span>
+            <span>PREMIUM QUALITY</span><span class="sep">✦</span>
+            <span>DISCORD BOTS</span><span class="sep">✦</span>
+            <span>SERVER SETUP</span><span class="sep">✦</span>
+            <span>CUSTOM WEBSITES</span><span class="sep">✦</span>
+            <span>BOT MANAGEMENT</span><span class="sep">✦</span>
+            <span>PREMIUM QUALITY</span><span class="sep">✦</span>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-head">
+                <p class="tag anim" data-anim="fade-up">WHAT WE DO</p>
+                <h2 class="section-title anim" data-anim="fade-up" data-delay="100">Our <em
+                        class="gradient-text">Services</em></h2>
+                <p class="section-sub anim" data-anim="fade-up" data-delay="200">Every project is built with precision,
+                    performance, and passion.</p>
+            </div>
+            <div class="services-grid">
+                <a href="server-development.html" class="s-card anim" data-anim="fade-up" data-delay="0">
+                    <div class="s-card-glow"></div>
+                    <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg></div>
+                    <span class="s-num">01</span>
+                    <h3>Discord Server Development</h3>
+                    <p>Complete server architecture — channels, roles, permissions, bots, and aesthetic design from the
+                        ground up.</p>
+                    <span class="s-link">Learn More →</span>
+                    <div class="s-card-border"></div>
+                </a>
+                <a href="bot-development.html" class="s-card anim" data-anim="fade-up" data-delay="100">
+                    <div class="s-card-glow"></div>
+                    <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M16 18l6-6-6-6" />
+                            <path d="M8 6l-6 6 6 6" />
+                        </svg></div>
+                    <span class="s-num">02</span>
+                    <h3>Bot Development</h3>
+                    <p>Feature-rich Discord bots — moderation, music, economy, leveling, utilities. You name it, we code
+                        it.</p>
+                    <span class="s-link">Learn More →</span>
+                    <div class="s-card-border"></div>
+                </a>
+                <a href="bot-management.html" class="s-card anim" data-anim="fade-up" data-delay="200">
+                    <div class="s-card-glow"></div>
+                    <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg></div>
+                    <span class="s-num">03</span>
+                    <h3>Bot Management</h3>
+                    <p>24/7 hosting, maintenance, updates, and support. We keep your bots running so you don't have to.
+                    </p>
+                    <span class="s-link">Learn More →</span>
+                    <div class="s-card-border"></div>
+                </a>
+                <a href="custom-bots.html" class="s-card anim" data-anim="fade-up" data-delay="300">
+                    <div class="s-card-glow"></div>
+                    <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 2v4m0 12v4m-10-10h4m12 0h4m-3.5-6.5l-2.8 2.8m-5.4 5.4l-2.8 2.8m0-11.2l2.8 2.8m5.4 5.4l2.8 2.8" />
+                        </svg></div>
+                    <span class="s-num">04</span>
+                    <h3>Custom Bots</h3>
+                    <p>Fully tailored bots with unique features, custom branding, and exclusive functionality — built
+                        just for you.</p>
+                    <span class="s-link">Learn More →</span>
+                    <div class="s-card-border"></div>
+                </a>
+                <a href="custom-websites.html" class="s-card s-card-wide anim" data-anim="fade-up" data-delay="400">
+                    <div class="s-card-glow"></div>
+                    <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg></div>
+                    <span class="s-num">05</span>
+                    <h3>Custom Websites</h3>
+                    <p>Stunning, responsive websites with modern design. Landing pages, portfolios, dashboards —
+                        pixel-perfect and performance-optimized.</p>
+                    <span class="s-link">Learn More →</span>
+                    <div class="s-card-border"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Nox -->
+    <section class="section" id="why">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-left">
+                    <p class="tag anim" data-anim="fade-up">WHY NOX</p>
+                    <h2 class="section-title anim" data-anim="fade-up" data-delay="100">Built by developers,<br><em
+                            class="gradient-text">for developers.</em></h2>
+                    <p class="why-desc anim" data-anim="fade-up" data-delay="200">Nox Development isn't just a service —
+                        it's a community of passionate developers who live and breathe code.</p>
+                    <div class="why-checks">
+                        <div class="check anim" data-anim="fade-up" data-delay="300">
+                            <div class="check-icon">✓</div><span>Lightning-fast delivery</span>
+                        </div>
+                        <div class="check anim" data-anim="fade-up" data-delay="350">
+                            <div class="check-icon">✓</div><span>Clean, maintainable code</span>
+                        </div>
+                        <div class="check anim" data-anim="fade-up" data-delay="400">
+                            <div class="check-icon">✓</div><span>24/7 support & communication</span>
+                        </div>
+                        <div class="check anim" data-anim="fade-up" data-delay="450">
+                            <div class="check-icon">✓</div><span>Free resources for the community</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-right anim" data-anim="fade-up" data-delay="300">
+                    <div class="code-window">
+                        <div class="code-bar"><span class="cd r"></span><span class="cd y"></span><span
+                                class="cd g"></span><span class="code-name">nox.config.js</span></div>
+                        <pre class="code-content"><code><em class="ck">const</em> <em class="cv">nox</em> = {
+  <em class="cp">name</em>: <em class="cs">"Nox Development"</em>,
+  <em class="cp">mission</em>: <em class="cs">"Build. Ship. Share."</em>,
+  <em class="cp">services</em>: [
+    <em class="cs">"Discord Servers"</em>,
+    <em class="cs">"Bot Development"</em>,
+    <em class="cs">"Custom Websites"</em>,
+  ],
+  <em class="cp">quality</em>: <em class="cs">"Premium"</em>,
+  <em class="cp">available</em>: <em class="ck">true</em>,
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section stats-section" id="stats">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat anim" data-anim="fade-up" data-delay="0">
+                    <span class="stat-val" data-count="50">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat anim" data-anim="fade-up" data-delay="100">
+                    <span class="stat-val" data-count="30">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat anim" data-anim="fade-up" data-delay="200">
+                    <span class="stat-val" data-count="100">0</span><span class="stat-plus">%</span>
+                    <span class="stat-label">Satisfaction Rate</span>
+                </div>
+                <div class="stat anim" data-anim="fade-up" data-delay="300">
+                    <span class="stat-val" data-count="24">0</span><span class="stat-plus">/7</span>
+                    <span class="stat-label">Support Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-head">
+                <p class="tag anim" data-anim="fade-up">TRUSTED</p>
+                <h2 class="section-title anim" data-anim="fade-up" data-delay="100">What Our Clients <em class="gradient-text">Say</em></h2>
+                <p class="section-sub anim" data-anim="fade-up" data-delay="200">Real feedback from real communities we've helped build.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="t-card anim" data-anim="fade-up" data-delay="0">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"Nox completely transformed our Discord server. The channel layout, custom bots, and aesthetic design exceeded every expectation. Our community engagement doubled within a week."</p>
+                    <div class="t-author">
+                        <div class="t-avatar">A</div>
+                        <div class="t-info">
+                            <h4>Arjun</h4>
+                            <span>Gaming Community • 5K+ Members</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card anim" data-anim="fade-up" data-delay="100">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"The custom bot they built for us handles moderation, tickets, and giveaways flawlessly. Clean code, fast delivery, and they were available whenever I had questions. 10/10."</p>
+                    <div class="t-author">
+                        <div class="t-avatar">R</div>
+                        <div class="t-info">
+                            <h4>Rohan</h4>
+                            <span>NFT Project • 12K+ Members</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-card anim" data-anim="fade-up" data-delay="200">
+                    <div class="t-stars">★★★★★</div>
+                    <p class="t-quote">"I needed a landing page that looked premium and loaded fast. Nox delivered exactly that — dark theme, particle effects, buttery smooth animations. My users love it."</p>
+                    <div class="t-author">
+                        <div class="t-avatar">I</div>
+                        <div class="t-info">
+                            <h4>Ishita</h4>
+                            <span>SaaS Startup • Website Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-head">
+                <p class="tag anim" data-anim="fade-up">FAQ</p>
+                <h2 class="section-title anim" data-anim="fade-up" data-delay="100">Frequently Asked <em class="gradient-text">Questions</em></h2>
+                <p class="section-sub anim" data-anim="fade-up" data-delay="200">Quick answers to common questions about our services.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item anim" data-anim="fade-up" data-delay="0">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>How long does a typical project take?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Most bot projects take 3–7 days. Server setups are typically 1–3 days. Custom websites vary from 5–14 days depending on complexity. We always provide a timeline before starting.</p></div>
+                </div>
+                <div class="faq-item anim" data-anim="fade-up" data-delay="50">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>What are your prices?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Pricing depends on scope and complexity. Simple bots start around $15–30, server setups from $10–25, and websites from $30+. Open a ticket for an exact quote — it's free and fast.</p></div>
+                </div>
+                <div class="faq-item anim" data-anim="fade-up" data-delay="100">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>Do you offer revisions?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Yes! Every project includes revisions. We work with you until you're 100% satisfied. Minor tweaks are always free, and major changes are discussed transparently.</p></div>
+                </div>
+                <div class="faq-item anim" data-anim="fade-up" data-delay="150">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>Do I get the source code?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Absolutely. You own everything we build. Full source code is delivered with documentation. For managed bots, source is provided at the end of your management plan.</p></div>
+                </div>
+                <div class="faq-item anim" data-anim="fade-up" data-delay="200">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>How do I get started?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-a"><p>Join our Discord and open a ticket. Describe what you need, and a team member will respond within an hour with questions, a quote, and an estimated timeline.</p></div>
+                </div>
+                <div class="faq-item anim" data-anim="fade-up" data-delay="250">
+                    <button class="faq-q" aria-expanded="false">
+                        <span>What payment methods do you accept?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-a"><p>We accept PayPal, cryptocurrency (BTC/ETH/LTC), and other methods on a case-by-case basis. Payment is typically split — 50% upfront, 50% on delivery.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="section" id="resources">
+        <div class="container">
+            <div class="section-head">
+                <p class="tag anim" data-anim="fade-up">COMMUNITY</p>
+                <h2 class="section-title anim" data-anim="fade-up" data-delay="100">Free <em
+                        class="gradient-text">Resources</em></h2>
+                <p class="section-sub anim" data-anim="fade-up" data-delay="200">We believe in giving back. Tools, templates, and guides — free for everyone.</p>
+            </div>
+            <div class="resources-grid">
+                <div class="r-card anim" data-anim="fade-up" data-delay="0">
+                    <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></div>
+                    <span class="r-badge">Free</span>
+                    <h4>Bot Starter Template</h4>
+                    <p>A clean Discord.js v14 bot template with slash commands, event handling, and modular cog system ready to go.</p>
+                    <a href="https://discord.gg/8aNvAveuEr" class="r-link" target="_blank">Get it on Discord →</a>
+                </div>
+                <div class="r-card anim" data-anim="fade-up" data-delay="100">
+                    <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                    <span class="r-badge">Guide</span>
+                    <h4>Server Setup Checklist</h4>
+                    <p>Step-by-step blueprint for building a professional Discord server — channels, roles, bots, and security.</p>
+                    <a href="https://discord.gg/8aNvAveuEr" class="r-link" target="_blank">Read the Guide →</a>
+                </div>
+                <div class="r-card anim" data-anim="fade-up" data-delay="200">
+                    <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                    <span class="r-badge">Free</span>
+                    <h4>Landing Page Starter</h4>
+                    <p>Dark-themed, responsive HTML/CSS starter kit with particle effects, glassmorphism, and premium animations.</p>
+                    <a href="https://discord.gg/8aNvAveuEr" class="r-link" target="_blank">Download Free →</a>
+                </div>
+                <div class="r-card anim" data-anim="fade-up" data-delay="300">
+                    <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                    <span class="r-badge">Tool</span>
+                    <h4>Permission Calculator</h4>
+                    <p>Quick Discord permission integer calculator — paste a number, see the flags. No more guesswork.</p>
+                    <a href="https://discord.gg/8aNvAveuEr" class="r-link" target="_blank">Try it Free →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" id="cta">
+        <div class="container">
+            <div class="cta-box anim" data-anim="fade-up">
+                <div class="cta-glow-1"></div>
+                <div class="cta-glow-2"></div>
+                <p class="tag">READY TO START?</p>
+                <h2 class="cta-title">Let's build something <em class="gradient-text">extraordinary.</em></h2>
+                <p class="cta-sub">Open a ticket in our Discord to get a custom quote. We respond fast and deliver
+                    faster.</p>
+                <a href="https://discord.gg/8aNvAveuEr" class="btn-primary btn-lg" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                        <path
+                            d="M20.317 4.37a19.79 19.79 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.618-1.25.077.077 0 00-.079-.037A19.74 19.74 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.1 13.1 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.078-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.3 12.3 0 01-1.873.892.076.076 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.84 19.84 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 00-.031-.03z" />
+                    </svg>
+                    <span>Join Our Discord</span>
+                </a>
+                <p class="cta-note">⚡ Average response time: under 1 hour</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo"><img src="nox2.png" alt="Nox" loading="lazy"><span>NOX DEVELOPMENT</span></div>
+                    <p>Premium development services for Discord communities & beyond.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>Navigate</h4><a href="#hero">Home</a><a href="#services">Services</a><a
+                            href="#why">About</a><a href="#cta">Contact</a>
+                    </div>
+                    <div class="footer-col"><h4>Services</h4><a href="server-development.html">Server Dev</a><a href="bot-development.html">Bot Dev</a><a href="custom-websites.html">Websites</a><a href="bot-management.html">Management</a></div>
+                    <div class="footer-col">
+                        <h4>Community</h4><a href="https://discord.gg/8aNvAveuEr" target="_blank">Discord</a><a
+                            href="#resources">Resources</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nox Development. All rights reserved.</p>
+                <p>Crafted with ❤️ and precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
